@@ -3,6 +3,7 @@
 
 from multiprocessing import Pool
 from pymongo import MongoClient
+import pymongo
 from pymongo.errors import PyMongoError
 import requests
 import time
