@@ -3,7 +3,7 @@
 # Original author: Valtyr Farshield (github.com/farshield)
 # License: MIT (https://opensource.org/licenses/MIT)
 
-from dotenv import find_dotenv, load_dotenv, get_key, set_key
+from dotenv import find_dotenv, load_dotenv, get_key, set_key 
 
 import hashlib
 import os
@@ -12,8 +12,6 @@ import re
 dotenvPath = find_dotenv()
 if not get_key(dotenvPath, 'MONGODB_URL'):
   raise Exception('You must specify MONGODB_URL in your .env file')
-if not re.match('\w+@\w+', os.getenv('MAIL')) and not get_key(dotenvPath, 'MAIL'):
-  raise Exception('You must specify your contact MAIL in your .env file')
 if not get_key(dotenvPath, 'OS_HASH'):
   osHash = hashlib.sha256(str(os.environ).encode('utf-8')).hexdigest()
   set_key(dotenvPath, 'OS_HASH', osHash)
