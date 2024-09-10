@@ -899,7 +899,7 @@ class DBParserMongo(DBParser):
             pilot_db['achievement_ids'] = []
 
           pilot_db['achievement_ids'].append(achievement['id'])
-          self.DB.pilot_achievements.update(
+          self.DB.pilot_achievements.update_one(
             {'_id': pilot_db['_id']},
             {
               '$addToSet': {
