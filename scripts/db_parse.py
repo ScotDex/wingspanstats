@@ -4,6 +4,7 @@
 # Original author: Valtyr Farshield (github.com/farshield)
 # License: MIT (https://opensource.org/licenses/MIT)
 
+import logging
 from bson.objectid import ObjectId
 from copy import deepcopy
 from datetime import datetime
@@ -363,8 +364,10 @@ class DBParser(object):
     """
     if type == "mongo":
       log(DBParser.LOG_LEVEL, 'Creating MongoDB database parser')
-      return DBParserMongo()
-
+      try:
+          return DBParserMongo()
+      except ValueError as e:
+          logging.error(f"Error creating DBParserMongo: {e}")
     raise AssertionError('Source {} is not defined'.format(type))
 
 
@@ -474,6 +477,7 @@ class DBParserMongo(DBParser):
 
     with open(os.path.join(StatsConfig.SCRIPTS_PATH, 'invTypes.csv'), 'r', encoding="utf-8") as f:
       reader = csv.reader(f)
+      next(reader)
       self.items = {int(row[0]): int(row[1]) for row in reader}
 
     self.DBClient = MongoClient(StatsConfig.MONGODB_URL)
