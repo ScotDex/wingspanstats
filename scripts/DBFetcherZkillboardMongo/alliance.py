@@ -53,7 +53,7 @@ class Alliance(object):
     while self.status not in [STATUS_DONE, STATUS_ERROR]:
       data = self._fetch()
 
-      if len(data) == 0 or self.state.get('page') == 20:
+      if len(data) == 0 or self.state.get('page') == 10:
         self.status = STATUS_DONE
         continue
 

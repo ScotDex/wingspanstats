@@ -7,6 +7,8 @@ from datetime import datetime
 from scripts.log import log
 from scripts.db_fetch import DBFetcher
 from scripts.db_parse import DBParser
+from dotenv import load_dotenv
+load_dotenv()
 
 if __name__ == "__main__":
   timestamp_start = datetime.now()
