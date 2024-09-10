@@ -33,7 +33,7 @@ class DBFetcherESIMongo(DBFetcher):
     self.DB = self.DBClient.WDS_statistics_v3
 
   def _fetch_killmails(self):
-    size = self.DB.killmails.find({'status.zkb': True, 'status.esi': False}).count()
+    size = self.DB.killmails.count_documents({'status.zkb': True, 'status.esi': False})
     if size == 0:
       return
 
