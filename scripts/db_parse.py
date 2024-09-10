@@ -822,7 +822,7 @@ class DBParserMongo(DBParser):
     url = StatsConfig.ENDPOINT_ESI_UNIVERSE_NAMES
 
     pilots = self.DB.pilot_names.find({'name': None})
-    max = int(pilots.count() / 100)
+    max = int(self.DB.pilot_names.count_documents({'name': None}) / 100)
 
     for i in range(0, max + 1):
       arr = []
