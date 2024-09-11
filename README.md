@@ -17,10 +17,10 @@
 
 ## Usage
 
-bash
-$ nano config/statsconfig.py
-$ python3 wingspanstats.py
-Use code with caution.
+```bash
+- $ nano config/statsconfig.py
+- $ python3 wingspanstats.py
+Use code with caution.```
 
 Thanks
 Original Authors: farshield/wingspanstats
@@ -31,6 +31,8 @@ Significant Contributors:
 - ScottishDex/Dexomus Viliana
 - Rustam Gubaydullin (@second_fry)
 - https://github.com/ntfoster
+- https://github.com/loustewart
 
 Note:
-This codebase has evolved over time, and some sections may reflect older coding practices or dependencies. The code is now considered almost fully functional, thanks to contributions from ScottishDex/Dexomus Viliana. Additional documentation is being developed to ensure the code remains maintainable and doesn't become redundant again.
+
+- This codebase has evolved over time, and some sections may reflect older coding practices or dependencies. The code is now considered almost fully functional, thanks to contributions from ScottishDex/Dexomus Viliana. Additional documentation is being developed to ensure the code remains maintainable and doesn't become redundant again.
