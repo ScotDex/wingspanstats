@@ -17,10 +17,10 @@
 
 ## Usage
 
-```bash
+bash
 - $ nano config/statsconfig.py
 - $ python3 wingspanstats.py
-Use code with caution.```
+Use code with caution.
 
 Thanks
 Original Authors: farshield/wingspanstats
