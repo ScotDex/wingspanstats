@@ -37,7 +37,7 @@ class DBFetcherESIMongo(DBFetcher):
     if size == 0:
       return
 
-    self._log('We are about to process {} entities, please grab a tea and enjoy the logs'.format(size))
+    self._log('We are about to process {} entities, sit back and watch me work'.format(size)) # slightly more amusing comment
 
     killmails = list(self.DB.killmails.find({'status.zkb': True, 'status.esi': False}))
     killmail_chunks = [killmails[i:i + StatsConfig.ESI_WORKER_PAYLOAD_LENGTH] for i in range(0, len(killmails), StatsConfig.ESI_WORKER_PAYLOAD_LENGTH)]
