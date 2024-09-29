@@ -24,7 +24,7 @@
 ## Usage
 
 bash
-- $ ./installscript (deploys required packages to run the backend **untested**)
+- $ ./installscript (deploys required packages to run the backend) - Havent tested the script
 - $ nano config/statsconfig.py
 - $ python3 wingspanstats.py
 Use code with caution.
